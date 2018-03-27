@@ -9,7 +9,7 @@ import provider.Hello;
 @Service(value = "helloService")
 public class HelloImpl implements Hello {
 
-    public void learnDubbo() {
-        System.out.println("hello dubbo zookeeper");
+    public String learnDubbo() {
+        return "dubbo is very nice rpc framework!";
     }
 }

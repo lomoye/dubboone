@@ -1,5 +1,6 @@
 package com.wjh.consumer.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import provider.Hello;
@@ -12,15 +13,15 @@ import javax.annotation.Resource;
 @RestController
 public class ConsumerController {
 
-    @Resource(name = "helloService")
+    @Autowired
     private Hello hello;
 
     @RequestMapping("/test")
     private String ceshi(){
         if (hello != null){
-            System.out.println("success");
-            hello.learnDubbo();
+            System.out.println(hello.learnDubbo());
+
         }
-        return "success";
+        return hello.learnDubbo();
     }
 }
