@@ -10,8 +10,8 @@ import org.springframework.context.annotation.ImportResource;
 @SpringBootApplication
 //@ComponentScan
 @ImportResource(value = {"classpath:dubbo-consumer.xml"})
-public class Application {
+public class ConsumerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class,args);
+        SpringApplication.run(ConsumerApplication.class,args);
     }
 }

@@ -18,10 +18,7 @@ public class ConsumerController {
 
     @RequestMapping("/test")
     private String ceshi(){
-        if (hello != null){
-            System.out.println(hello.learnDubbo());
 
-        }
         return hello.learnDubbo();
     }
 }

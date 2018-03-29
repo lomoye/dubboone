@@ -15,5 +15,7 @@
     <!-- 用dubbo协议在20880端口暴露服务 -->
     <!--<dubbo:protocol name="dubbo" port="28080"/>-->
     <!-- 声明需要暴露的服务接口 -->
+    <dubbo:consumer filter="contextFilter"/> <!-- 消费方调用过程缺省拦截器，将拦截所有reference -->
+
     <dubbo:reference id="helloService" interface="provider.Hello" check="false" />
 </beans>
